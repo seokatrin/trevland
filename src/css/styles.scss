@@ -1,0 +1,113 @@
+//fonts
+@import url(https://fonts.googleapis.com/css?family=Roboto:regular,500,600,700);
+@import url(https://fonts.googleapis.com/css?family=Gelasio:regular,500,700,);
+@import url(https://fonts.googleapis.com/css?family=Ribeye:regular);
+//reset styles
+@import "./null.scss";
+
+// varaibles
+@import "./varaibles";
+
+//components styles
+@import "./header.scss";
+@import './burger.scss';
+@import "./pages/mainBlock.scss";
+@import "./pages/location.scss";
+@import "./pages/offers.scss";
+@import "./pages/blog.scss";
+@import "./footer.scss";
+
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+.wrapper {
+  min-height: 100%;
+  overflow: hidden;
+}
+._container {
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 0 15px;
+  box-sizing: border-box;
+}
+// ----------BUTTON ------------
+.button {
+  display: block;
+  border-radius: 5px;
+  background-color: $col-red;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  &:hover {
+    background-color: darken($col-red, 15%) ;
+  }
+}
+._ibg {
+  position: relative;
+}
+._ibg img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+}
+//-----------MAIN IMG-----------------
+.mainBlock__image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  img {
+    object-position: right;
+    @media (max-width: 992px) {
+      opacity: 0.7;
+    }
+    @media (max-width: 500px) {
+      object-position: 80% 0;
+    }
+  }
+}
+
+// ----------LOGO-------
+.logo {
+  font-family: Ribeye;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 1.5;
+  letter-spacing: 0.06em;
+}
+
+// ---------------HEADER-BLOCK------------------
+.headerBlock {
+  text-align: center;
+
+  .headerBlock__title {
+    font-family: Gelasio;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 43px;
+    line-height: 1.4;
+    margin: 0 0 20px 0;
+    @media (max-width: 530px) {
+      font-size: 36px;
+      margin: 0 0 15px 0;
+    }
+  }
+  
+  .headerBlock__text {
+    line-height: 1.6;
+    opacity: 0.6;
+    @media (max-width: 530px) {
+      line-height: 1.2;
+    }
+  }
+}

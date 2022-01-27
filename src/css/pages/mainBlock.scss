@@ -1,0 +1,53 @@
+.mainBlock {
+  padding: 20px 0 0 0;
+  height: 100%;
+}
+
+.mainBlock__container {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  color: #fff;
+  > :not(:last-child) {
+    margin: 0 0 30px 0;
+  }
+  @media (max-width: 992px) {
+    > :not(:last-child) {
+      margin: 0 0 20px 0;
+    }
+  }
+
+  .mainBlock__title {
+    font-family: Gelasio;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 65px;
+    line-height: 1.2;
+    @media (max-width: 992px) {
+      font-size: 46px;
+    }
+    @media (max-width: 500px) {
+      font-size: 32px;
+    }
+  }
+
+  .mainBlock__subtitle {
+    max-width: 458px;
+    line-height: 1.6;
+    opacity: 0.6;
+    @media (max-width: 992px) {
+      color: #000;
+      font-weight: 600;
+    }
+  }
+
+  .mainBlock__button {
+    width: 187px;
+    height: 59px;
+  }
+}
+

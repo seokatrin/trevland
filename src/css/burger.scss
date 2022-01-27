@@ -1,0 +1,52 @@
+.menu__burger {
+    display: none;
+    @media (max-width: 767px) {
+      width: 30px;
+      height: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      cursor: pointer;
+  
+      &:after,
+      &:before {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 3px;
+        background-color: #fff;
+        position: absolute;
+        transition: all 0.3s ease-in-out;
+      }
+      &:before {
+        top: 0;
+      }
+      &:after {
+        bottom: 0;
+      }
+      .menu__line {
+        width: 100%;
+        height: 3px;
+        background-color: #fff;
+        transition: all 0.3s ease-in-out;
+      }
+      &.open {
+        .menu__line {
+          transform: scale(0);
+        }
+        &:before,
+        &:after {
+          background-color: $col-red;
+          transition: all 0.2s ease-in-out;
+        }
+        &:before {
+          transform: rotate(-45deg) translate(-7px, 6px);
+        }
+        &:after {
+          transform: rotate(45deg) translate(-5px, -6px);
+        }
+      }
+    }
+  }
+  

@@ -1,0 +1,100 @@
+.offers {
+  padding: 140px 0 0 0;
+  @media (max-width: 965px) {
+    padding: 70px 0 0 0;
+  }
+
+  .offers__headerBlock {
+    max-width: 656px;
+    margin: 0 auto;
+  }
+
+  .offers__content {
+    padding: 60px 0 0 0;
+    max-width: 932px;
+    margin: 0 auto;
+    overflow: hidden;
+    @media (max-width: 965px) {
+      width: 597px;
+    }
+    @media (max-width: 630px) {
+      width: 335px;
+      padding: 40px 0 0 35px;
+    }
+    @media (max-width: 340px) {
+      padding: 30px 0 0 20px;
+    }
+
+    .item-offers {
+      display: grid;
+      grid-template-columns: repeat(5, 262px);
+      grid-gap: 73px;
+      transition: all 0.4s ease;
+
+      .item-offers__block {
+        line-height: 1.5;
+        flex: 0 0 20%;
+        text-align: center;
+
+        & > :not(:first-child) {
+          margin: 8px 0 0 0;
+        }
+
+        .item-offers__title {
+          font-family: Gelasio;
+          font-style: normal;
+          font-weight: 500;
+          font-size: 24px;
+          margin: 20px 0 0 0;
+        }
+
+        .item-offers__image {
+          width: 100%;
+          img {
+            width: 100%;
+          }
+        }
+
+        .item-offers__location {
+          .item-offers__country {
+            padding: 0 50px 0 20px;
+            font-size: 20px;
+            opacity: 0.6;
+            background: url("./assets/offers/map.svg") no-repeat 0 50%;
+          }
+
+          .item-offers__star {
+            padding: 0 0 0 30px;
+            background: url("./assets/offers/star.svg") no-repeat 0 0;
+          }
+        }
+
+        .item-offers__days {
+          font-size: 16px;
+          opacity: 0.6;
+        }
+
+        .item-offers__price {
+          span {
+            opacity: 0.6;
+          }
+        }
+      }
+    }
+  }
+  .offers__buttons {
+    padding: 50px 0 20px 0;
+    display: flex;
+    justify-content: space-between;
+    max-width: 340px;
+    margin: 0 auto;
+    
+    & div {
+      width: 40px;
+      height: 40px;
+      text-align: center;
+      cursor: pointer;
+    }
+  }
+}
+

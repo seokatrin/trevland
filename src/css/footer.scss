@@ -1,0 +1,104 @@
+.footer {
+  background: rgba(38, 148, 153, 0.04);
+  padding: 70px 0 78px 0;
+  @media (max-width: 530px) {
+    padding: 50px 0;
+  }
+}
+  .footer__container {
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+    line-height: 1.6;
+    letter-spacing: 0.06em;
+    @media (max-width: 892px) {
+      flex-wrap: wrap;
+
+      .footer__item {
+          margin: 0 15px 0 0; 
+      }
+    }
+    @media (max-width: 530px) {
+
+      .footer__item:first-child {
+        flex: 0 1 100%;
+      }
+      .footer__item:nth-child(2),
+      .footer__item:nth-child(3) {
+        flex: 0 1 50%;
+        margin: 20px 0 20px 0;
+      }
+    }
+
+    .footer__link {
+      color: inherit;
+      font-weight: 500;
+    }
+
+    li:not(:last-child) {
+      margin: 0 0 20px 0;
+    }
+
+    .footer__contacts {
+      margin: 40px 0 0 0;
+      display: flex;
+      flex-direction: column;
+
+      span:first-child {
+        margin: 0 0 10px 0;
+      }
+    }
+
+    .footer__socials {
+      margin: 20px 0 0 0;
+      max-width: 160px;
+      display: flex;
+      justify-content: space-between;
+      
+      img {
+        cursor: pointer;
+        display: block;
+        &:hover {
+          opacity: 0.5;
+        }
+      }
+    }
+
+    .footer__subscribe {
+      font-weight: 500;
+      font-size: 20px;
+      text-transform: uppercase;
+      margin: 0 0 42px 0;
+      @media (max-width: 530px) {
+        margin: 0 0 20px 0;
+      }
+    }
+
+    .footer__form {
+      display: flex;
+      @media (max-width: 375px) {
+          flex-direction: column;
+      }
+      .footer__input {
+        margin: 0 35px 0 0;
+        padding: 10px 20px;
+        width: 195px;
+        height: 44px;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+        &:focus {
+          box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
+        }
+      }
+
+      .footer__button {
+        @media (max-width: 375px) {
+            margin: 15px 0 0 0;
+        }
+        color: #fff;
+        width: 103px;
+        height: 44px;
+      }
+    }
+  }
+
